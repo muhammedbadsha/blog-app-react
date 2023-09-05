@@ -1,0 +1,71 @@
+input{
+    width: 73%;
+    padding: 12px 20px;
+    margin: 8px 0 10px 31px;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    border-width:0px 0px 2px 0px;
+}
+input:focus{
+    outline:none;
+    border-image: linear-gradient(to right, #DEAFDB 0%, #EFB9AD 100%) 1;
+    border-width:0px 0px 2px 0px;
+}
+/* button{
+
+} */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    height: 48em;
+    background-color:white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+
+}
+.otp-form-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10em;
+    width: 24em;
+    background-color:white;
+    border-width: 2px;
+    border-color: black;
+    height: 35%;
+    border-radius: 12px;
+}
+.center-container{
+    border-color: black;
+    margin-top: 0em;
+    background-color:rgb(76 187 99);
+    height: 48em;
+    width: 85em;
+    margin-left: -7px;
+    display: flex;
+    justify-content: center;
+}
+.field-name-fi{
+    display: flex;
+    flex-direction: column;
+}
+.btn-otp-form{
+    background-color: rgb(76 187 99);
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    height: 3em;
+    width: 73%;
+    margin-top: 2rem;
+    margin-left: 2em;
+}
+.otp-form-main h1{
+    color: rgb(76 187 99);
+    margin-left: -1em;
+    /* margin-left: 1em; */
+}

@@ -1,0 +1,90 @@
+input{
+    width: 91%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    border-width:0px 0px 2px 0px;
+}
+input:focus{
+    outline:none;
+    border-image: linear-gradient(to right, #DEAFDB 0%, #EFB9AD 100%) 1;
+    border-width:0px 0px 2px 0px;
+}
+/* button{
+
+} */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    height: 48em;
+    background-color:white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+
+}
+.center-container{
+    border-color: black;
+    margin-top: 0em;
+    background-color:rgb(76 187 99);
+    height: 48em;
+    width: 85em;
+    margin-left: -7px;
+    display: flex;
+    justify-content: center;
+
+}
+.login-form{
+    width: 26em;
+    height: 25em;
+    border: 2px 2px 2px 2px;
+    border-color: white;
+    margin-left: 3em;
+
+}
+.field-name-fi{
+    display: flex;
+    flex-direction: column;
+}
+/* .field-name-fi label , .field-name-fi input, .field-name-fi button{
+    width: 21em;
+    height: 2rem;
+    margin-bottom: 2mm;
+    margin-top: -1mm;
+} */
+.register-form-main h1{
+    color: rgb(76 187 99);
+    /* margin-left: 1em; */
+}
+.register-form-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6em;
+    width: 34em;
+    background-color:white;
+    border-width: 2px;
+    border-color: black;
+    height: 73%;
+    border-radius: 12px;
+}
+
+.btn-regsiter-form{
+    background-color: rgb(76 187 99);
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    height: 3em;
+    width: 91%;
+    margin-top: 2rem;
+}
+.foot-log-register{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2em;
+}
