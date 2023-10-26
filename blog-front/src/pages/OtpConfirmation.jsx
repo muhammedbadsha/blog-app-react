@@ -11,7 +11,7 @@ const OtpConfirmation = () => {
       <section class="bg-white-500 dark:bg-gray-900  h-screen sm:h-screen md:h-screen lg:h-screen w-full flex flex-col items-center  py-6  mx-auto md:h-screen lg:py-8">
     <div className="main-container w-1/3">
 
-      <div className="w-full bg-white bg-gray-100  rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 item-center  justify-center">
+      <div className="w-full  bg-gray-100  rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 item-center  justify-center">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white flex flex-col items-center justify-center">
                   OTP Verification
