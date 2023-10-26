@@ -1,4 +1,4 @@
-input{
+/* input{
     width: 73%;
     padding: 12px 20px;
     margin: 8px 0 10px 31px;
@@ -13,7 +13,7 @@ input:focus{
 }
 /* button{
 
-} */
+} 
 .main-container{
     display: flex;
     flex-direction: column;
@@ -67,5 +67,5 @@ input:focus{
 .otp-form-main h1{
     color: rgb(76 187 99);
     margin-left: -1em;
-    /* margin-left: 1em; */
-}
+     margin-left: 1em; 
+} */

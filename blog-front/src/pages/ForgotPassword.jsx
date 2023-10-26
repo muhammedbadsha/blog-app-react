@@ -21,8 +21,8 @@ import { Link } from 'react-router-dom'
             
             <button type="submit" className='btn-regsiter-form-login'>Submit</button>
             <div className='footer-of-login'>
-              <p>I know my password back to <Link to={'/Login'}>Login</Link></p>
-              {/* <p><Link to={'/Forgot_password'}>Forgot Password</Link></p> */}
+              <div>I know my password back to <Link to={'/Login'}>Login</Link></div>
+              <div><Link to={'/Forgot_password'}>Forgot Password</Link></div>
             </div>
           </div>
         </form>

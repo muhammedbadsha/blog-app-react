@@ -1,4 +1,4 @@
-input{
+/* input{
     width: 83%;
     padding: 12px 20px;
     margin-top: 15px;
@@ -15,11 +15,11 @@ input:focus{
 .email-field-login{
     margin-bottom: 2rem;
     margin-top: 1rem;
-}
+} */
 /* button{
 
 } */
-.main-container-login{
+/* .main-container-login{
     display: flex;
     flex-direction: column;
     height: 48em;
@@ -57,20 +57,20 @@ input:focus{
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
-}
+} */
 /* .field-name-fi label , .field-name-fi input, .field-name-fi button{
     width: 21em;
     height: 2rem;
     margin-bottom: 2mm;
     margin-top: -1mm;
 } */
-.register-form-main-login h1{
+/* .register-form-main-login h1{
     color: rgb(76 187 99);
-    margin-top: 1em;
+    margin-top: 1em; */
     /* height: 50%; */
     /* margin-left: 1em; */
-}
-.register-form-main-login{
+/* } */
+/* .register-form-main-login{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,9 +82,9 @@ input:focus{
     border-color: black;
     height: 47%;
     border-radius: 12px;
-}
+} */
 
-.btn-regsiter-form-login{
+/* .btn-regsiter-form-login{
     background-color: rgb(76 187 99);
     border: none;
     outline: none;
@@ -92,14 +92,14 @@ input:focus{
     height: 3em;
     width: 91%;
     margin-top: 2rem;
-}
+} */
 
-.footer-of-login{
+/* .footer-of-login{
     display: flex;
     gap: 3em;
 }
 
 Link{
     text-decoration-line: none;
-}
+} */
 
