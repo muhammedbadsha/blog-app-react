@@ -1,88 +1,102 @@
 import React from "react";
 import img_6_sq from "../../assets/blog_pic/hero_5.jpg";
 import hero from "../../assets/blog_pic/hero_3.jpg";
+import profile from "../../assets/blog_pic/person_2.jpg"
+import { Link } from "react-router-dom";
 
-export function Cards() {
+const BlogCard = ({ title, author, image,date,time ,description }) => {
   return (
-    <div className="flex flex-col-3 gap-5 px-12 py-12">
-      <div
-        className=" max-w-sm  border border-gray-200 rounded-lg shadow  dark:border-gray-700 bg-cover bg-center lg:h-64"
-        style={{ backgroundImage: `url(${hero})` }}
-      >
-        <div class="p-5">
-          <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-neutral-50 dark:text-neutral-50">
-              Noteworthy technology acquisitions 2021
-            </h5>
-          </a>
-          <p class="mb-3 font-normal text-neutral-50 dark:text-neutral-50">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
-          <a
-            href="#"
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Read more
-            <svg
-              class="w-3.5 h-3.5 ml-2"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 5h12m0 0L9 1m4 4L9 9"
-              />
-            </svg>
-          </a>
-        </div>
+  
+      
+    <div className="w-full lg:w-3/4  sm:w-2/5 md:w-2/3 rounded-md shadow bg-cover hover:shadow-lg"   >
+      <div className="py-3 px-3 rounded-lg w-full h-44 bg-gray-400 bg-cover" style={{ backgroundImage:`url(${image})` }}> 
+       
+     </div>
+      <div className="py-3 px-3  ">
+        <h1 className="text-xl font-semibold ">{title}</h1>
+
       </div>
-      <div
-        className="max-w-sm  border border-gray-200 rounded-lg shadow  dark:border-gray-700 bg-cover bg-center lg:h-80"
-        style={{ backgroundImage: `url(${img_6_sq})` }}
-      >
-        <div class="p-5">
-          <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-neutral-50 dark:text-white">
-              Noteworthy technology acquisitions 2021
-            </h5>
-          </a>
-          <p class="mb-3 font-normal text-neutral-50 dark:text-neutral-50">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
-          <a
-            href="#"
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Read more
-            <svg
-              class="w-3.5 h-3.5 ml-2"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 5h12m0 0L9 1m4 4L9 9"
-              />
-            </svg>
-          </a>
+      <div className="px-4 flex">
+        <div className="w-5 h-5 rounded-full bg-red-400 bg-cover" style={{backgroundImage: `url(${profile})`}}>
         </div>
+        <div className="px-3 text-xs text-gray-400 flex justify-between w-full">
+          <p>
+          {author} 
+          </p>
+          <p className="text-natural-400 flex justify-end ">{date} {time}</p>
+         
+          </div>
+      </div>
+      <div>
+        <p className="px-3 py-3">{description}</p>
+      </div>
+      <div>
+        
       </div>
     </div>
+    
   );
-}
-
-export const HomeMainCards = () => {
-  return <></>;
 };
+
+export const BlogList = () => {
+  const blogs = [
+    {
+      title: 'Blog Title 1',
+      author: 'Author 1',
+      image: img_6_sq,
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+      title: 'Blog Title 2',
+      author: 'Author 2',
+      image: hero,
+      description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      title: 'Blog Title 2',
+      author: 'Author 2',
+      image: hero,
+      description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      title: 'Blog Title 2',
+      author: 'Author 2',
+      image: img_6_sq,
+      description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      title: 'Blog Title 2',
+      author: 'Author 2',
+      image: hero,
+      description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      title: 'Blog Title 2',
+      author: 'Author 2',
+      image: hero,
+      description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      title: 'Blog Title 2',
+      author: 'Author 2',
+      image: img_6_sq,
+      description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      title: 'Blog Title 2',
+      author: 'Author 2',
+      image: img_6_sq,
+      description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    // Add more blog objects
+  ];
+
+  return (
+    <div className="grid lg:grid-cols-4 md:grid-cols-3 lg:gap-6 md:gap-6 lg:px-12 md:px-5 lg:py-12 md:py-7 justify-center">
+      {blogs.map((blog, index) => (
+        <BlogCard key={index} {...blog} />
+      ))}
+    </div>
+  );
+};
+

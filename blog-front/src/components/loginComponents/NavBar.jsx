@@ -23,7 +23,7 @@ export const NavBar = () => {
           <div
             className={`font-medium ${!isExpanded ? "" : "sm:hidden md:flex"}`}
           >
-            <Link path="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <div className="text-bold sm:text-base md:text-lg lg:text-4xl ">
                 <b>B</b>log<b>H</b>ub
               </div>
