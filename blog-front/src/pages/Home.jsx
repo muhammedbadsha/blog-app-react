@@ -1,12 +1,16 @@
 import React from "react";
 import { NavBar } from "../components/loginComponents/NavBar";
-import TrendingBlogs from "../components/Blogs/TrendingBlogs";
+// import TrendingBlogs from "../components/Blogs/TrendingBlogs";
+import { BlogList } from "../components/Blogs/Cards";
+import DisplayBoard from "../components/Blogs/DisplayBoard";
 
 function Home() {
   return (
     <>
       <NavBar />
-      <TrendingBlogs />
+      <DisplayBoard/>
+      <BlogList />
+      {/* <TrendingBlogs /> */}
     </>
   );
 }

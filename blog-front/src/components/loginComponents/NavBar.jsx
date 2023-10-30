@@ -65,7 +65,7 @@ export const NavBar = () => {
           </div>
         </div>
       </nav>
-      <nav className="bg-gray-50 dark:bg-gray-700 sticky top-0  ">
+      <nav className="bg-gray-50 dark:bg-gray-700 w-screen sticky top-0  ">
         <div className="max-w-screen-xl px-4 py-3 mx-auto flex justify-between">
           <div className="scrollbarCate flex items-center overflow-x-auto scroll-pl-6">
             <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
