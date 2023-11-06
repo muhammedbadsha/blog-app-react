@@ -13,7 +13,7 @@ function LoginPage() {
   }
   const [formData,setFormData] = useState({
     'email':"",
-    'passwor':""
+    'password':""
   })
   return (
     <>

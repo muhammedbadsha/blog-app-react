@@ -1,23 +1,23 @@
 import React from 'react'
-import {BiLeftArrow,BiRightArrow} from 'react-icons/bi'
-import image_carosal from '../../assets/blog_pic/img_6_horizontal.jpg'
+// import {BiLeftArrow,BiRightArrow} from 'react-icons/bi'
+// import image_carosal from '../../assets/blog_pic/img_6_horizontal.jpg'
 import {Swiper, SwiperSlide} from "swiper/react"
 import { Pagination,FreeMode } from 'swiper/modules'
 import {RxArrowTopRight} from 'react-icons/rx'
 import { ServiceData } from '../data/serviceData'
 import { Link } from 'react-router-dom'
-import { useSwiper } from 'swiper/react';
+// import { useSwiper } from 'swiper/react';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import "swiper/css/effect-cards"
-import  Navigation  from 'swiper'
-import SwiperCore from 'swiper';
+// import  Navigation  from 'swiper'
+// import SwiperCore from 'swiper';
 
 // SwiperCore.use([Navigation]);
 function Carousel() {
-    const swiper = useSwiper()
-    let swiperRef = null;
+    // const swiper = useSwiper()
+    // let swiperRef = null;
     const params = {
         spaceBetween: 30,
         loop: true,

@@ -6,6 +6,7 @@ import LoginPage from './pages/LoginPage'
 import RegistrationPage from './pages/RegistrationPage'
 import ForgotPassword from './pages/ForgotPassword'
 import OtpConfirmation from './pages/OtpConfirmation'
+import DetailViewBlog from './pages/DetailViewBlog'
 
 
 
@@ -18,6 +19,7 @@ function App() {
     <Route path = '/Registration' element={<RegistrationPage/>} />
     <Route path = '/Forgot_password' element={<ForgotPassword/>} />
     <Route path = '/otp' element={<OtpConfirmation/>} />
+    <Route path='/DetailViewBlog' element={<DetailViewBlog />} />
     {/* <Route path = '/reset_password' element={<ForgotPassword/>} /> */}
     
   </Routes>

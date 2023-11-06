@@ -5,11 +5,11 @@ import hero from "../../assets/blog_pic/hero_3.jpg";
 import profile from "../../assets/blog_pic/person_2.jpg"
 // import blue_icon from "../../assets/icons/save_icon_blue.png"
 // import normal_icon from "../../assets/icons/save_icon_normal.png"
-import { Link } from "react-router-dom";
-import {AiOutlineMinusCircle,AiOutlineSave} from "react-icons/ai"
+// import { Link } from "react-router-dom";
+import {AiOutlineMinusCircle} from "react-icons/ai"
 import {CiMenuKebab} from "react-icons/ci"
-const BlogCard = ({ title, author, image,date,time ,description }) => {
-  const [Saved, setSaved] =useState(true)
+export const BlogCard = ({ title, author, image,date,time ,description }) => {
+  const [Saved, setSaved] =useState(false)
   return (
   
       
@@ -38,8 +38,8 @@ const BlogCard = ({ title, author, image,date,time ,description }) => {
       </div>
       <div className="flex gap-4 py-3 px-3 justify-end">
         <div>
-        <div className="w-5 h-5" > {Saved ? (<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="bookmark"><path fill="#6563FF" d="M16,2H8C6.3,2,5,3.3,5,5v16c0,0.2,0,0.3,0.1,0.5C5.4,22,6,22.1,6.5,21.9l5.5-3.2l5.5,3.2C17.7,22,17.8,22,18,22c0.6,0,1-0.4,1-1V5C19,3.3,17.7,2,16,2z"></path></svg>):(
-       <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="bookmark"><path fill="#ADADC5" d="M16,2H8C6.3,2,5,3.3,5,5v16c0,0.2,0,0.3,0.1,0.5C5.4,22,6,22.1,6.5,21.9l5.5-3.2l5.5,3.2C17.7,22,17.8,22,18,22c0.6,0,1-0.4,1-1V5C19,3.3,17.7,2,16,2z"></path></svg>)}</div>
+        <div className="w-5 h-5" onClick={() => setSaved(!Saved)}> {Saved ? (<svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" viewBox="0 0 24 24" id="bookmark"><path fill="#6563FF" d="M16,2H8C6.3,2,5,3.3,5,5v16c0,0.2,0,0.3,0.1,0.5C5.4,22,6,22.1,6.5,21.9l5.5-3.2l5.5,3.2C17.7,22,17.8,22,18,22c0.6,0,1-0.4,1-1V5C19,3.3,17.7,2,16,2z"></path></svg>):(
+       <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" viewBox="0 0 24 24" id="bookmark"><path fill="#ADADC5" d="M16,2H8C6.3,2,5,3.3,5,5v16c0,0.2,0,0.3,0.1,0.5C5.4,22,6,22.1,6.5,21.9l5.5-3.2l5.5,3.2C17.7,22,17.8,22,18,22c0.6,0,1-0.4,1-1V5C19,3.3,17.7,2,16,2z"></path></svg>)}</div>
         <div></div>
         </div>
         <div><AiOutlineMinusCircle /></div>
