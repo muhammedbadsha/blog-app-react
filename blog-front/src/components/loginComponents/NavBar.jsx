@@ -12,6 +12,7 @@ export const NavBar = () => {
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
+  
   // const checkUserAuthenticated = useReducer(() => {
   //     setUserAuthenticated(!userAuthenticated);
   // })
@@ -65,56 +66,7 @@ export const NavBar = () => {
           </div>
         </div>
       </nav>
-      <nav className="bg-gray-50 dark:bg-gray-700 w-full sticky top-0">
-        <div className="max-w-screen-xl px-4 py-3 mx-auto flex justify-between">
-          <div className="scrollbarCate flex items-center overflow-x-auto scroll-pl-6">
-            <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
-              <li>
-                <Link
-                  className="text-gray-900 dark:text-white hover:underline"
-                  aria-current="page"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link className="text-gray-900 dark:text-white hover:underline">
-                  Company
-                </Link>
-              </li>
-              <li>
-                <Link className="text-gray-900 dark:text-white hover:underline">
-                  Team
-                </Link>
-              </li>
-              <li>
-                <Link className="text-gray-900 dark:text-white hover:underline">
-                  Features
-                </Link>
-              </li>
-            </ul>
-          </div>
-          { userAuthenticated &&
-          <div className="">
-            <svg
-              className="w-6 h-6 text-gray-800 dark:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 18"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 5h9M5 9h5m8-8H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h4l3.5 4 3.5-4h5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"
-              />
-            </svg>
-          </div>
-          }
-        </div>
-      </nav>
+     
      
     </>
   );
