@@ -8,7 +8,7 @@ import DropDown from "../DropDown";
 
 export const NavBar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [userAuthenticated, setUserAuthenticated] = useState(false);
+  const [userAuthenticated, setUserAuthenticated] = useState(true);
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
@@ -19,7 +19,7 @@ export const NavBar = () => {
 
   return (
     <>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <nav className="bg-white border-gray-200 dark:bg-gray-100 z-1  ">
         <div className="flex flex-wrap justify-between items-center mx-auto min-w-screen-sm max-w-screen-xl p-4">
           <div
             className={`font-medium ${!isExpanded ? "" : "sm:hidden md:flex"}`}
@@ -55,7 +55,7 @@ export const NavBar = () => {
           </div>
           <div>
             {userAuthenticated ? (
-               <DropDown />
+               <DropDown className="z-15"/>
             ) : (
               <Link className="text-sm  text-blue-600 dark:text-blue-500 hover:underline">
                 <FiUserX className="text-black inline-block align-middle h-8 w-8" />

@@ -8,7 +8,7 @@ const OtpConfirmation = () => {
        <NavBar />
        
 
-      <section class="bg-white-500 dark:bg-gray-900  h-screen sm:h-screen md:h-screen lg:h-screen w-full flex flex-col items-center  py-6  mx-auto md:h-screen lg:py-8">
+      <section className="bg-white-500 dark:bg-gray-900  h-screen sm:h-screen md:h-screen lg:h-screen w-full flex flex-col items-center  py-6  mx-auto md:h-screen lg:py-8">
     <div className="main-container w-1/3">
 
       <div className="w-full  bg-gray-100  rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 item-center  justify-center">

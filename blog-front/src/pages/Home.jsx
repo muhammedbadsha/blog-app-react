@@ -1,35 +1,46 @@
 import React from "react";
 import { useState } from "react";
 import { NavBar } from "../components/loginComponents/NavBar";
+// import ComplexNavbar from '../components/HeadNav'
 // import TrendingBlogs from "../components/Blogs/TrendingBlogs";
 import { BlogList } from "../components/Blogs/Cards";
 import Carousel from "../components/Blogs/Carousel";
 import CategoryNav from "../components/loginComponents/CategoryNav";
-import Chat from "./Chat";
+// import Chat from "./Chat";
+import ChatIcone from "../components/chat/ChatIcone";
+import NewChat from "./NewChat";
 // import DisplayBoard from "../components/Blogs/DisplayBoard";
 
 function Home() {
   const [chat, setChat] = useState(false);
-  const closeChat =()=>{
-    setChat(false)
-  }
-  const openChat=()=>{
+  const closeChat = () => {
+    setChat(false);
+  };
+  const openChat = () => {
     console.log("printed");
-    setChat(true)
-  }
+    setChat(true);
+  };
   return (
     <>
       {chat ? (
         <div>
-          <CategoryNav closeChat={closeChat} openChat = {openChat} chat_is={true}/>
-          <Chat />
+          {/* <CategoryNav
+           
+          /> */}
+          {/* <Chat /> */}
+          <NewChat closeChat={closeChat} openChat={openChat} chat_is={true} />
         </div>
-        
-        ) : (
-          <div>
+      ) : (
+        <div>
+          {/* <ComplexNavbar/> */}
           <NavBar />
-          <CategoryNav closeChat={closeChat} openChat = {openChat} chat_is={false}/>
-          <Carousel />
+          <ChatIcone closeChat={closeChat} openChat={openChat} chat_is={false} />
+          <CategoryNav
+            closeChat={closeChat}
+            openChat={openChat}
+            chat_is={false}
+          />
+          {/* <Carousel /> */}
           <BlogList />
         </div>
       )}

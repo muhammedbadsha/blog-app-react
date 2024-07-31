@@ -1,79 +1,76 @@
 import React from 'react'
 // import {BiLeftArrow,BiRightArrow} from 'react-icons/bi'
-// import image_carosal from '../../assets/blog_pic/img_6_horizontal.jpg'
-import {Swiper, SwiperSlide} from "swiper/react"
-import { Pagination,FreeMode } from 'swiper/modules'
-import {RxArrowTopRight} from 'react-icons/rx'
-import { ServiceData } from '../data/serviceData'
-import { Link } from 'react-router-dom'
-// import { useSwiper } from 'swiper/react';
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import "swiper/css/effect-cards"
+import image from "../../assets/carousal_img/carousal1.jpg"
+
 // import  Navigation  from 'swiper'
 // import SwiperCore from 'swiper';
 
 // SwiperCore.use([Navigation]);
 function Carousel() {
-    // const swiper = useSwiper()
-    // let swiperRef = null;
-    const params = {
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        breakpoints:{
-            340: {
-              slidesPerView: 2,
-              spaceBetween: 15,
-            },
-            600: {
-              slidesPerView: 3,
-              spaceBetween: 15,
-            },
-            780: {
-              slidesPerView: 3,
-              spaceBetween: 15,
-            },
-          }
-        }
+    
 
     
     return (
-        <div className="flex  items-center justify-center flex-col h-[600px] bg-[#6c34af]" hover="() => swiper.slideNext()">
-          <Swiper
-            {...params}
-            freeMode={true}
-          pagination={{
-            clickable: true,
-          }}
-            modules={[FreeMode, Pagination]}
-            className="max-w-[90%] lg:max-w-[80%]"
-          >
-            {ServiceData.map((item) => (
-              <SwiperSlide key={item.title}>
-                <Link >
-                <div className="flex relative z-0 flex-col  gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer hover:cursor-pointer ">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${item.backgroundImage})` }}
-                  />
-                  <div className="absolute inset-0z-30 bg-black opacity-10 group-hover:opacity-50" />
-                  <div className="relative flex flex-col gap-3">
-                    <item.icon className="text-blue-600 group-hover:text-blue-400 w-[32px] h-[32px]" />
-                    <h1 className="text-xl lg:text-2xl">{item.title} </h1>
-                    <p className="lg:text-[18px]">{item.content} </p>
-                  </div>
-                  <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:text-blue-500 group-hover:rotate-45 duration-100" />
-                </div>
-                </Link>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+        // <div className="flex z-1 items-center justify-center flex-col h-[600px] bg-[#6c34af] " hover="() => swiper.slideNext()">
+        
+
+<div id="default-carousel" className="relative w-full" data-carousel="slide">
+    
+    <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+         
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={image} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
         </div>
+        
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={image}  className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        </div>
+        
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={image}  className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        </div>
+        
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={image} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        </div>
+        
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={image} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        </div>
+    </div>
+ 
+    <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        <button type="button" className="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+        <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+    </div>
+  
+    <button type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span className="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span className="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+        // </div>
       );
 }
 

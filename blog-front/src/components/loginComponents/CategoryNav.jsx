@@ -12,7 +12,7 @@ const CategoryNav = ({openChat, closeChat, chat_is}) => {
   const [isFixed, setIsFixed] = useState(false);
   const handleScroll = () => {
     const scrollTop = window.scrollY; 
-    setIsFixed(scrollTop >= 73);
+    setIsFixed(scrollTop >= 677);
   };
 const handleCloseOpen=()=>{
   if (chat_is === true){
@@ -33,13 +33,13 @@ const handleCloseOpen=()=>{
   }, []);
   
   return (
-    <div> 
+    <div className=''> 
   
-      <nav   className={classNames('bg-gray-100 dark:bg-gray-700 w-full transition-all duration-300 z-30', {
-        'fixed top-0 left-0 right-0': isFixed,
+      <nav   className={classNames('bg-gray-700 dark:bg-gray-700 w-full transition-all duration-300 z-[-1]', {
+        'fixed top-0 left-0 right-0 bg-gray-700': isFixed,
         'relative': !isFixed,
       })}>
-    <div className="bg-gray-100 max-w-screen-xl px-4 py-3 mx-auto flex justify-between">
+    <div className="bg-gray-700 max-w-screen-xl px-4 py-3 mx-auto flex justify-between">
      { chat_is? (<div className='bg-gray-100 flex items-center text-2xl font-medium'>
       <h1 className=''></h1>
      </div>):(
@@ -72,11 +72,11 @@ const handleCloseOpen=()=>{
           </li>
         </ul>
       </div>)}
-      { userAuthenticated &&
+      {/* { userAuthenticated &&
       <div  className="">
         { chat_is? (<IoCloseSharp className='w-10 h-10' onClick={handleCloseOpen}/>):(
           <div className=' w-30 h-30'>
-            <div className='absolute top-0 right-10 w-5 h-5 rounded-full bg-red-400 flex items-center justify-center text-white'>2</div>
+            <div className='relative top-3 right-[-12px] w-5 h-5 rounded-full bg-red-400 flex items-center justify-center text-white'>2</div>
         <svg
           className="w-6 h-6 text-gray-800 dark:text-white"
           aria-hidden="true"
@@ -96,7 +96,7 @@ const handleCloseOpen=()=>{
         </div>
         )}
       </div>
-      }
+      } */}
     </div>
   </nav>
   </div>
