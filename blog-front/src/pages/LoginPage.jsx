@@ -1,21 +1,30 @@
-import React, { useState } from "react";
+ import React, { useState } from "react";
 import { NavBar } from "../components/loginComponents/NavBar";
 import "../staticfiles/logincssfiles/Login-container.css";
 import { Link } from "react-router-dom";
 import { login } from "../redux/features/users/auth/userAuthSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function LoginPage() {
   const dispatch = useDispatch();
-  const [errors, setErrors] = useState({});
+  const navigate = useNavigate()
+  // const [errors, setErrors] = useState({});
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  const { status, error } = useSelector((state) => state.auth);
-  const handleSubmit = async (e) => {
+  const { status, error ,isLoggedIn} = useSelector((state) => state.auth);
+
+ React.useEffect(()=>{
+  if (isLoggedIn){
+    
+    navigate('/')
+  }
+ },[isLoggedIn,navigate])
+  const handleSubmit = async (e) => { 
     e.preventDefault();
-    dispatch(login(formData));
-    console.log(status , 'this is status problem')
-    if (status==="idle")
-      Navigate('/')
+    try{
+      dispatch(login(formData)); 
+    }catch(e){
+      console.log(e);
+    }
   };
   const passwordUnVisible = () => {
     setIsPasswordVisible(true)
@@ -120,8 +129,8 @@ function LoginPage() {
                   </Link>
                 </div>
               </form>
-                    {status === 'loading' && <p>Loading...</p>}
-                    {status === 'failed' && <p>Error: {error}</p>}
+                    {status === 'loading' && <p className="">Loading...</p>}
+                    {status === 'failed' && <p className="text-red-400">Error: {error}</p>}
             </div>
           </div>
         </div>

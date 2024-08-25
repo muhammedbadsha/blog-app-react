@@ -1,6 +1,7 @@
 import React from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import ChatInput from "../components/chat/ChatInput";
+import { Link } from "react-router-dom";
 
 const NewChat = ({ openChat, closeChat, chat_is }) => {
   const handleCloseOpen = () => {
@@ -37,7 +38,7 @@ const NewChat = ({ openChat, closeChat, chat_is }) => {
             </div>
             <ul className="overflow-auto overflow-scroll scroll-smooth x_scrollbar_hide h-5/6">
               <li>
-                <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
+                <Link className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
                   <img
                     className="object-cover w-10 h-10 rounded-full"
                     src="https://cdn.pixabay.com/photo/2018/09/12/12/14/man-3672010__340.jpg"
@@ -61,8 +62,8 @@ const NewChat = ({ openChat, closeChat, chat_is }) => {
                       </span>
                     </div>
                   </div>
-                </a>
-                <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
+                </Link>
+                <Link className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
                   <img
                     className="object-cover w-10 h-10 rounded-full"
                     src="https://cdn.pixabay.com/photo/2018/09/12/12/14/man-3672010__340.jpg"
@@ -79,8 +80,8 @@ const NewChat = ({ openChat, closeChat, chat_is }) => {
                     </div>
                     <span className="block ml-2 text-sm text-gray-600">bye</span>
                   </div>
-                </a>
-                <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
+                </Link>
+                <Link className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
                   <img
                     className="object-cover w-10 h-10 rounded-full"
                     src="https://cdn.pixabay.com/photo/2018/09/12/12/14/man-3672010__340.jpg"
@@ -97,8 +98,8 @@ const NewChat = ({ openChat, closeChat, chat_is }) => {
                     </div>
                     <span className="block ml-2 text-sm text-gray-600">bye</span>
                   </div>
-                </a>
-                <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
+                </Link>
+                <Link className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
                   <img
                     className="object-cover w-10 h-10 rounded-full"
                     src="https://cdn.pixabay.com/photo/2018/09/12/12/14/man-3672010__340.jpg"
@@ -115,8 +116,8 @@ const NewChat = ({ openChat, closeChat, chat_is }) => {
                     </div>
                     <span className="block ml-2 text-sm text-gray-600">bye</span>
                   </div>
-                </a>
-                <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
+                </Link>
+                <Link className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
                   <img
                     className="object-cover w-10 h-10 rounded-full"
                     src="https://cdn.pixabay.com/photo/2018/09/12/12/14/man-3672010__340.jpg"
@@ -133,8 +134,8 @@ const NewChat = ({ openChat, closeChat, chat_is }) => {
                     </div>
                     <span className="block ml-2 text-sm text-gray-600">bye</span>
                   </div>
-                </a>
-                <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
+                </Link>
+                <Link className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
                   <img
                     className="object-cover w-10 h-10 rounded-full"
                     src="https://cdn.pixabay.com/photo/2018/09/12/12/14/man-3672010__340.jpg"
@@ -151,8 +152,8 @@ const NewChat = ({ openChat, closeChat, chat_is }) => {
                     </div>
                     <span className="block ml-2 text-sm text-gray-600">bye</span>
                   </div>
-                </a>
-                <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out bg-gray-100 border-b border-gray-300 cursor-pointer focus:outline-none">
+                </Link>
+                <Link className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out bg-gray-100 border-b border-gray-300 cursor-pointer focus:outline-none">
                   <img
                     className="object-cover w-10 h-10 rounded-full"
                     src="https://cdn.pixabay.com/photo/2016/06/15/15/25/loudspeaker-1459128__340.png"
@@ -171,8 +172,8 @@ const NewChat = ({ openChat, closeChat, chat_is }) => {
                       Good night
                     </span>
                   </div>
-                </a>
-                <a className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
+                </Link>
+                <Link className="flex items-center px-3 py-2 text-sm transition duration-150 ease-in-out border-b border-gray-300 cursor-pointer hover:bg-gray-100 focus:outline-none">
                   <img
                     className="object-cover w-10 h-10 rounded-full"
                     src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383__340.jpg"
@@ -191,7 +192,7 @@ const NewChat = ({ openChat, closeChat, chat_is }) => {
                       Good Morning
                     </span>
                   </div>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -4,7 +4,6 @@ import { NavBar } from "../components/loginComponents/NavBar";
 // import ComplexNavbar from '../components/HeadNav'
 // import TrendingBlogs from "../components/Blogs/TrendingBlogs";
 import { BlogList } from "../components/Blogs/Cards";
-import Carousel from "../components/Blogs/Carousel";
 import CategoryNav from "../components/loginComponents/CategoryNav";
 // import Chat from "./Chat";
 import ChatIcone from "../components/chat/ChatIcone";

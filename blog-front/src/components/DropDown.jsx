@@ -1,14 +1,60 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
 import elenthkadavu_pic from "../assets/profile_pic/elenthkadavu_pic.jpg";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import ProfileView from "../pages/ProfileView";
+import { useDispatch } from "react-redux";
+import {logout} from "../redux/features/users/auth/userAuthSlice"
+import { useNavigate } from "react-router-dom";
+// import { logoutUser } from "../redux/features/users/auth/userAuthSlice";
+// import ProfileView from "../pages/ProfileView";
+const BaseUrlLogout = 'http://127.0.0.1:8000/api/auth/logout'
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
+
+
 const DropDown = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const logoutUser = async()=>{
+    const refreshToken = localStorage.getItem('refresh_token')
+    try{
+        const response = await axios.post(BaseUrlLogout,
+          {refresh_token:refreshToken},
+          {headers: {
+            'Content-Type':'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+          },
+        }
+        );
+        if (response.status === 205){
+          console.log('Logged out successfully');
+          dispatch(logout())
+          navigate('/Login')
+        }
+
+        
+    }
+    catch (error){
+        console.log("Error loggin out: ",error);
+    };
+};
+
+  const LoggedOut = async()=>{
+    try{
+      // logoutUser()
+      logoutUser();
+      
+    }
+    catch(error){
+      console.log(error);
+      
+    }
+  }
   return (
     <div className="">
       <Menu as="div" className="relative ml-3">
@@ -65,6 +111,7 @@ const DropDown = () => {
                     active ? "bg-gray-100" : "",
                     "block px-4 py-2 text-sm text-gray-700"
                   )}
+                  onClick={LoggedOut}
                 >
                   Sign out
                 </Link>

@@ -5,14 +5,25 @@ import { RiSearch2Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import "../../staticfiles/logincssfiles/nav.css";
 import DropDown from "../DropDown";
+import { useSelector } from "react-redux";
 
 export const NavBar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [userAuthenticated, setUserAuthenticated] = useState(true);
+  const [userAuthenticated, setUserAuthenticated] = useState(false);
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
-  
+
+  const loggedOut = ()=>{
+    
+  }
+  const {isLoggedIn} = useSelector((state)=>state.auth)
+  React.useEffect(()=>{
+   
+    if (isLoggedIn){
+      setUserAuthenticated(true)
+    }
+  },[isLoggedIn])
   // const checkUserAuthenticated = useReducer(() => {
   //     setUserAuthenticated(!userAuthenticated);
   // })
@@ -57,7 +68,7 @@ export const NavBar = () => {
             {userAuthenticated ? (
                <DropDown className="z-15"/>
             ) : (
-              <Link className="text-sm  text-blue-600 dark:text-blue-500 hover:underline">
+              <Link to='/Login' className="text-sm  text-blue-600 dark:text-blue-500 hover:underline">
                 <FiUserX className="text-black inline-block align-middle h-8 w-8" />
               </Link>
             )}
