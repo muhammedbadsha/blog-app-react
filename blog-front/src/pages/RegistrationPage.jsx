@@ -21,30 +21,30 @@ function RegistrationPage() {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
 
-    // const formDatas = JSON.stringify(formData);
-    dispatch(signUpUser(formData))
-      .then((response) => {
-        Navigate("/otp");
-      })
-      .catch((errors) => {
-        if (
-          errors.response &&
-          errors.response.data &&
-          errors.response.data.errors
-        )
-          setErrors(errors.response.data.errors);
-      });
-    setFormData({
-      first_name: "",
-      last_name: "",
-      email: "",
-      password: "",
-      confirm_password: "",
-    });
-  };
+  //   const formDatas = JSON.stringify(formData);
+  //   dispatch(signUpUser(formData))
+  //     .then((response) => {
+  //       Navigate("/otp");
+  //     })
+  //     .catch((errors) => {
+  //       if (
+  //         errors.response &&
+  //         errors.response.data &&
+  //         errors.response.data.errors
+  //       )
+  //         setErrors(errors.response.data.errors);
+  //     });
+  //   setFormData({
+  //     first_name: "",
+  //     last_name: "",
+  //     email: "",
+  //     password: "",
+  //     confirm_password: "",
+  //   });
+  // };
   return (
     <>
       <NavBar />
@@ -58,7 +58,9 @@ function RegistrationPage() {
               </h1>
         <form
           action=""
-          onSubmit={handleSubmit}
+          // onSubmit={
+          //   // handleSubmit
+          // }
           method="post"
           className="login-form space-y-4 md:space-y-6 flex flex-col items-center justify-center">
           <div className="w-full">
